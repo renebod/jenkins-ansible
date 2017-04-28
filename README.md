@@ -1,2 +1,2 @@
 # python-demo
-Demo with Python scripts
+Demo with Python scripts for Python training
