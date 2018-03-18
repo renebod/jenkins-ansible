@@ -1,0 +1,24 @@
+version: '3.2'
+
+services:
+  jenkins:
+    image: jenkins
+    hostname: jenkins
+    ports:
+      - 9080:9080
+    networks:
+      - mgmt-network
+    volumes:
+      - ./jenkins/jenkins_home:/var/jenkins_home
+
+  ansible:
+    build:
+      context: ./docker/ansible
+    image: sandbox/jenkins_slave-runtime:v0.1
+    networks:
+      - mgmt-network
+      - dc1-network
+
+networks:
+  mgmt-network:
+  dc1-network:
