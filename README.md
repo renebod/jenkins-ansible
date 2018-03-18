@@ -1,2 +1,2 @@
-# python-demo
-Demo with Python scripts for Python training
+# jenkins-ansible
+Demo with Jenkins environment and Ansible worker node
