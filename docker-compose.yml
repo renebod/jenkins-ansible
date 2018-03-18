@@ -14,10 +14,12 @@ services:
   ansible:
     build:
       context: ./docker/ansible
-    image: sandbox/jenkins_slave-runtime:v0.1
+    image: sandbox/jenkins_ansible-runtime:v0.1
     networks:
       - mgmt-network
       - dc1-network
+    deploy:
+      replicas: 1
 
 networks:
   mgmt-network:
